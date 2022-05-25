@@ -1,0 +1,124 @@
+#op-menu {
+    color: #fff;
+}
+
+#menu-principal {
+    background: radial-gradient(circle, rgb(142, 159, 247) 0%, rgb(201, 116, 250) 100%);
+}
+
+.menu_comienzo {
+    position: relative;
+    font-size: 80px;
+    height: calc(100vh - 50px);
+    width: 100vw;
+    background-image: url(../multimedia/fondo.jpeg);
+    background-size: cover;
+    border-bottom: 3px solid rgb(125, 97, 134);
+    
+}
+
+#menu_comienzo-div {
+    width: 510px;
+    height: 80px;
+    font-family: 'Quintessential','PT Serif', cursive;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    user-select: none;
+}
+
+#cuerpo-menu p {
+    text-align: justify;
+    margin: 20px;
+    font-size: 30px;
+    font-family: 'Quintessential','Cedarville Cursive', cursive;
+    text-indent: 40px
+}
+
+#cuerpo-menu p::selection {
+    background: rgb(177, 115, 163);
+    color: #fff;
+}
+
+.fa-angle-double-down {
+    position: absolute;
+    right: 50%;
+    bottom: 30%;
+    left: 50%;
+    animation: 2s parpadeo infinite;
+}
+
+@keyframes parpadeo {
+    0%
+    {
+        color:#000;
+    }
+    50%
+    {
+        color:#aaa;
+        transform: translateY(20px);
+    }
+    100%
+    {
+        color: #000;
+    }
+}
+
+#suena-el-dembow, #date-la-vuelta {
+    margin: 20px 50px;
+    box-shadow: 4px 4px 20px 0 #000;
+    border: 8px solid rgb(138, 21, 21);
+    max-width: 600px;
+    max-height: 600px;
+    border-radius: 10px;
+}
+
+#cuerpo-menu_div-fotos {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
+}
+
+#div-fin {
+    display: flex;
+    justify-content: center;
+}
+
+#foto-fin {
+    filter: brightness(1.1);
+    mix-blend-mode: multiply;
+    max-width: 400px;
+}
+
+#barra-menu, #menu-principal {
+    overflow: hidden;
+}
+
+@media screen and (max-width: 500px) {
+    .menu_comienzo {
+        font-size: 45px;
+    }
+
+    #menu_comienzo-div {
+        width: 290px;
+        height: 45px;
+    }
+
+}
+
+@media screen and (max-width: 630px) {
+    #suena-el-dembow, #date-la-vuelta {
+        max-width: 300px;
+        max-height: 300px;
+    }
+}
+
+@media screen and (max-width: 410px) {
+    #foto-fin {
+        max-width: 365px;
+    }
+}

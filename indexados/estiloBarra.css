@@ -1,0 +1,97 @@
+body {
+    margin-top: 50px;
+}
+
+*{
+    font-family: "Segoe IU", sans-serif;
+}
+
+#barra-menu {
+    font-size: 20px;
+    color: #aaa;
+    background-color: #000;
+    display: block;
+    position: fixed;
+    margin-top: -50px;
+    width: 100vw;
+    height: 50px;
+    border-bottom: rgb(112, 88, 126) 8px double;
+    padding: 10px 20px;
+    z-index: 100;
+}
+
+.menu__opciones {
+    display: inline-block;
+}
+
+.menu__opciones i {
+    padding-right: 5px;
+    color: rgb(205, 135, 245);
+}
+
+.opcion {
+    text-decoration: none;
+    color: rgb(205, 135, 245);
+    padding-right: 20px;
+}
+
+.menu__opciones:hover > i {
+    color: #fff;
+}
+
+.menu__opciones:hover > .opcion {
+    color: #fff;
+}
+
+.corazon {
+    width: 30px;
+    height: 30px;
+    clip-path: polygon(10% 30%, 25% 19%, 40% 20%, 50% 30%, 60% 20%, 75% 19%, 90% 30%, 90% 50%, 80% 65%, 50% 100%, 20% 66%, 10% 50%);
+    background: #f00;
+    position: absolute;
+    top: 3px;
+    text-align: center;
+    font-size: 15px;
+    color: #000;
+    padding-top: 7px;
+    padding-right: 2px;
+}
+
+#corazon1 {
+    right: 45px;
+    animation: union 2s alternate infinite;
+    z-index: 2;
+}
+
+#corazon2 {
+    right: 15px;
+    z-index: 1;
+}
+
+@keyframes union {
+    0%
+    {
+        transform: translateX(0);
+    }
+    100%
+    {
+        transform: translateX(30px);
+        color: #f00;
+    }
+}
+
+@media screen and (max-width: 385px) {
+    #barra-menu {
+        font-size: 18px;
+        color: #aaa;
+        background-color: #000;
+        display: block;
+        position: fixed;
+        margin-top: -50px;
+        width: 100vw;
+        height: 50px;
+        border-bottom: rgb(112, 88, 126) 8px double;
+        padding: 12px 20px;
+        z-index: 100;
+    }
+}

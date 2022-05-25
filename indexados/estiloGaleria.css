@@ -1,0 +1,95 @@
+.texto-foto {
+    font-family: 'PT Serif', serif;
+    display: none;
+    position: absolute;
+    font-size: 42px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#op-fotos {
+    color: #fff;
+}
+
+/*#galeria-fotos {
+    display: grid;
+    padding-top: 20px;
+    grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
+    background: radial-gradient(circle, rgb(142, 159, 247) 0%, rgb(201, 116, 250) 100%);
+    grid-gap: 30px 10px;
+    justify-items: center;
+    align-items: center;
+}*/
+
+#galeria-fotos {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    background: radial-gradient(circle, rgb(142, 159, 247) 0%, rgb(201, 116, 250) 100%);
+    justify-items: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.galeria_div-foto img {
+    box-shadow: 4px 4px 20px 0 #000;
+    border: 8px solid rgb(138, 21, 21);
+    max-width: 400px;
+    max-height: 400px;
+    transition: opacity 1s, border 1s, box-shadow 1s;
+    border-radius: 10px;
+}
+
+.galeria_div-foto:hover > img {
+    opacity: 70%;
+    box-shadow: 10px 10px 20px 10px #000;
+    border: 8px solid #000;
+}
+
+.galeria_div-foto:hover > .texto-foto {
+    display: block;
+    user-select: none;
+}
+
+.galeria_div-foto
+{
+    margin: 80px;
+    height: 300px;
+    width: 300px;
+    position: relative;
+    display: flex;
+    text-align: center;
+    cursor: cell;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+}
+
+#foto-fondo-div {
+    position: fixed;
+    top: 50px;
+    height: calc(100vh - 50px);
+    width: 100%;
+    background-image: url(../multimedia/fondo.jpeg);
+    background-size: cover;
+    z-index: 1;
+}
+
+@media screen and (max-width: 500px) {
+    .galeria_div-foto img
+    {
+        max-width: 350px;
+        max-height: 350px;
+    }
+
+    .texto-foto {
+        font-family: 'PT Serif', serif;
+        display: none;
+        position: absolute;
+        font-size: 35px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
